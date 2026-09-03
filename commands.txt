@@ -21,3 +21,58 @@ kubectl rollout undo deployment/myapp-deployment
 
 // To generate a yaml file through command line tool with replicas
 kubectl create deployment --image=nginx nginx --replicas=5 --dry-run=client -o yaml > file-name.yaml
+
+// then apply to apply file's deployment
+
+
+
+    1  kubectl run --image=nging:alpine nginx-pod
+    2  kubectl run --image=nginx:alpine nginx-pod
+    3  kubectl delete pod nginx-pod
+    4  kubectl run --image=nginx:alpine nginx-pod
+    5  kubectl run --help
+    6  kubectl run redis -l tier=db --image=redis:alpine --dry-run=client -o yaml > redis-service-definition.yaml
+    7  kubectl apply -f redis-service-definition.yaml
+    8  history
+    9  kubectl expose pod redis --port=6379 --name=redis-service --type=ClusterIP --dry-run=client -o yaml > redis-service.yaml
+   10  kubectl apply -f redis-service.yaml
+   11  kubectl create --help
+   12  vi deployment.yaml
+   13  kubectl create webapp --image=kodekloud/webapp-color --rplicas=3
+   14  kubectl create deployment webapp --image=kodekloud/webapp-color --rplicas=3
+   15  kubectl create deployment webapp --image=kodekloud/webapp-color --replicas=3
+   16  kubectl create pod custom-nginx --image=nginx --containerPort=8080
+   17  kubectl run custom-nginx --image=nginx --containerPort=8080
+   18  kubectl run custom-nginx --image=nginx --port=8080
+   19  kubectl create namespacedev-ns
+   20  kubectl create namespace dev-ns
+   21  kubectl create deployment redis-deploy --image=redis -n dev-ns --replicas=2
+   22  kubeclt run httpd --image=httpd:alpine
+   23  kubectl run httpd --image=httpd:alpine
+   24  kubectl create service httpd --port=80 --type=ClusterIP
+   25  kubectl delete pod httpd
+   26  kubectl run httpd --image=httpd:alpine --port=80 --expose
+   27  kubectl get all
+   28  kubectl api-resources
+   29  kubectl get api-resources
+   30  kubectl --htlp
+   31  kubectl --help
+   32  kubectl api-resources | grep horizontalpodautoscalers
+   33  kubeclt get pods
+   34  kubectl get pods
+   35  kubectl explain redis
+   36  kubectl explain pod redis
+   37  kubectl explain nginx-pod
+   38  kubectl explain containers
+   39  kubectl describe pod httpd
+   40  kubectl explain --help
+   41  kubectl explain pods
+   42  kubectl explain pod.spec.containers
+   43  kubectl explain pod.spec
+   44  kubectl explain deployment.replicas
+   45  kubectl explain deployment.replica
+   46  kubectl explain deployment
+   47  kubectl explain deployment.spec
+   48  kubectl explain deployment --recursivve
+   49  kubectl explain deployment --recursive
+   50  kubectl explain service.spec.ports --recursive
