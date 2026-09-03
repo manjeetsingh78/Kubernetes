@@ -17,3 +17,7 @@ kubectl rollout history deployment/myapp-deployment
 
 // rollback
 kubectl rollout undo deployment/myapp-deployment
+
+
+// To generate a yaml file through command line tool with replicas
+kubectl create deployment --image=nginx nginx --replicas=5 --dry-run=client -o yaml > file-name.yaml
