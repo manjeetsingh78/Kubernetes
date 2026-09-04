@@ -1,0 +1,28 @@
+    1  kubectl get labels
+    2  kubectl get label
+    3  kubectl get labels node01
+    4  kubectl describe node node01
+    5  kubectl edit node node01
+    6  kubectl create deployment blue --image=nginx --replicas=3
+    7  kubect get all
+    8  kubect; get all
+    9  kubectl get all
+   10  kubectl describe pod pod/blue-8cbbcf895-7jm7h
+   11  kubectl get rs
+   12  kubectl describe rs
+   13  kubectl describe nodes controlplane | grep -i taints
+   14  kubectl describe nodes node01 | grep -i taints
+   15  kubectl describe node node01 | grep -i taints
+   16  kubectl edit node node01
+   17  ls
+   18  cat sample.yank
+   19  cat sample.yaml
+   20  kubectl set label node01 color=blue
+   21  kubectl set labels node01 color=blue
+   22  kubectl edit deployment nlue
+   23  kubectl edit deployment blue
+   24  kubectl describe node node01
+   25  kubectl create deployment red --image=nginx --replicas=2 --labels=node-role.kubernetes.io/control-plane:""
+   26  kubectl create deployment red --image=nginx --replicas=2 --labels=node-role.kubernetes.io/control-plane
+   27  kubectl create deployment red --image=nginx --replicas=2
+   28  kubectl edit deployment red
