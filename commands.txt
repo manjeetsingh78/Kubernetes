@@ -76,3 +76,45 @@ kubectl create deployment --image=nginx nginx --replicas=5 --dry-run=client -o y
    48  kubectl explain deployment --recursivve
    49  kubectl explain deployment --recursive
    50  kubectl explain service.spec.ports --recursive
+
+
+
+// These are the commands used in taint and toleration lab
+
+
+    1  kubectl get nodes
+    2  kubectl descibe node node01 | grep Taint
+    3  kubectl describe node node01 | grep Taint
+    4  kubectl describe node node01 | grep Taints
+    5  kubectl taint node node01 spray=mortein:NoSchedule
+    6  kubectl run mosquito --image=nginx
+    7  kubectl get pods
+    8  kubectl describe pod mosquito
+    9  kubectl run bee --image=nginx spray=mortein:NoSchedule
+   10  kubectl get pods
+   11  kubectl delete pod bee
+   12  kubectl run bee --image=nginx spray=mortein:NoSchedule --dry-run:client -o yaml > toleration.yaml
+   13  vi taint.yaml
+   14  kubectl apply -f taint.yaml
+   15  vi taint.yaml
+   16  kubectl apply -f taint.yaml
+   17  kubectl explain pod --recursive
+   18  clear
+   19  ls
+   20  cat toleration.yaml
+   21  kubectl get pods
+   22  cat taint.yaml
+   23  vi taint.yaml
+   24  kubectl apply -f tiant.yaml
+   25  kubectl apply -f taint.yaml
+   26  kubectl apply -f tiant.yaml
+   27  vi taint.yaml
+   28  kubectl apply -f tiant.yaml
+   29  kubectl apply -f taint.yaml
+   30  kubectl get pods
+   31  kubectl descrine pod bee
+   32  kubectl describe pod bee
+   33  kubectl descibe node controlplane | grep Taints
+   34  kubectl describe node controlplane | grep Taints
+   35  kubectl taint nodes controlplane node-role.kubernetes.io/control-plane:NoSchedule-
+   36  kubectl get pods
